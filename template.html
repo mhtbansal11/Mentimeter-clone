@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <link rel="stylesheet" href="./styles/styleType.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!-- bootstrap  -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+    <!-- new for modal  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    
+    <style>
+        :root{
+            --blue:rgb(25, 108, 255);
+            --grey:rgb(219, 220, 225);
+            --white:white;
+            --black: #000000;
+        }
+        #navbar{
+            height: 45px;
+            padding: 5px 0px;
+            display: flex;
+            justify-content: space-between;
+            border-top: 1px solid gainsboro;
+            border-bottom: 1px solid gainsboro;
+        }
+        /* #navbar>div{ */
+            /* border: 1px solid black; */
+        /* } */
+        #navbar>div:first-child>h3,p{
+            margin: 3px ;
+        }
+        #quiz_name{
+            font-size: 20px;
+            border: none;
+            font-weight: bold;
+        }
+        #quiz_name:hover{
+            border: 1px solid black;
+        }
+        ::-webkit-input-placeholder{
+            color: var(--black);
+            opacity: 1 !important;
+        }
+        /* navbar right side  */
+        #navbar>div:last-child{
+            display: flex;
+            margin: 0px 3px;
+        }
+        #navbar>div:last-child>button{
+            height: 90%;
+            margin-left: 10px ;
+            display: flex;
+            align-items: center;
+            background-color: var(--blue);
+            color: var(--white);
+            border: none;
+        }
+        #navbar>div:last-child>button:first-child{
+            border-radius: 0.25rem;
+            background-color: var(--grey);
+            color: var(--black);
+        }
+        #navbar>div:last-child>button:nth-child(2){
+            border-top-left-radius: 0.25rem;
+            border-bottom-left-radius: 0.25rem;
+        }
+        #navbar>div:last-child>button:first-child>h3{
+            margin: 5px;
+            padding: 0;
+            margin-left: 5px;
+        }
+        #navbar>div:last-child>button:nth-child(2)>h3{
+            margin: 5px;
+            padding: 0;
+            margin-left: 5px;
+            padding-right: 10px;
+            border-right: 1px solid var(--white);
+            font-weight: normal;
+        }
+        #navbar>div:last-child>button>span{
+            margin-left: 5px;
+        }
+        #navbar>div:last-child>select{
+            height: 90%;
+            background-color: var(--blue);     
+            color: var(--white);
+            border: none;     
+            border-top-right-radius: 0.25rem;
+            border-bottom-right-radius: 0.25rem;
+            width: 20px;
+        }
+
+        /* navbar-2  */
+        #navbar-2{
+            height: 45px;
+            padding: 7px 0px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid gainsboro;
+        }
+        #navbar-2-left{
+            display: flex;
+            column-gap: 10px;
+        }
+        #navbar-2-left>button{
+            height: 90%;
+            display: flex;
+            align-items: center;
+            background-color: var(--blue);
+            color: var(--white);
+            border: none;
+            border-radius: 0.25rem;
+        }
+        #navbar-2-left>button>h3{
+            padding: 0px 5px;
+            font-weight: normal;
+        }
+        /* 2nd button  */
+        #navbar-2-left>button:last-child{
+            background-color: var(--grey);
+            color: var(--black);
+        }
+        /* #navbar-2 right side  */
+        #navbar-2-right{
+            display: flex;
+            column-gap: 10px;
+            align-items: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: rgba(16, 24, 52, 0.75);
+        }
+        #navbar-2-right>div{
+            display: flex;
+            column-gap: 3px;
+            align-items: center;
+            font-weight: normal;
+        }
+        /* #navbar-2-right>div>span{
+            margin-top: 5px;
+        } */
+        #navbar-2-right>div>h3{
+            font-weight: normal;
+        }
+        /* main container  */
+        #main{
+            display: grid;
+            grid-template-columns: 14% 55% 31%;
+            height: 80vh;
+        }
+        #main>div{
+            border: 1px solid var(--grey);
+        }
+        /* slide page*/
+        #slide_page{
+            /* padding: 5px; */
+            height: 99.5%;
+            overflow: scroll;
+            overflow-x: hidden;
+        }
+        #slide_page>div{
+            display: flex;
+            padding: 5px 5px 5px 0px;
+            height: 90px;
+            /* border: 1px solid black; */
+        }
+        #slide_page>div:hover{
+            opacity: 0.5;
+        }
+        .no{
+            width: 20%;
+            border-right: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            border-left: 5px solid var(--blue);
+        }
+        .no>span:last-child>img{
+            width: 12px;
+            height: 12px;
+        }
+        .page{
+            width: 75%;
+            border: 1px solid black;
+            border-radius: 0.25rem;
+        }
+        .page>img{
+            width: 100%;
+            height: 100%;
+        }        
+
+        /* main slide  */
+        #main_slide{
+            padding: 20px;
+            background-color: rgb(236, 232, 232);
+        }
+        #main_slide>div{
+            width: 100%;
+            height: auto;
+            background: transparent;
+        }
+        #main_slide>div:first-child{
+            height: 360px;         
+            border: 1px solid var(--black);   
+        }
+        #main_slide>div:last-child{
+            margin-top: 5px;
+            height: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #main_slide>div:last-child>div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+        #main_slide>div:last-child>div:last-child{
+            display: flex;
+            column-gap: 10px;
+        }
+        #main_slide>div:last-child>div:last-child>h1{
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        #main_slide>div:last-child>div:first-child>div{
+            width: 150px;
+            height: 40px;
+            border: 1px solid black;
+            margin-right: 10px;
+        }        
+        /* main slide,video section */
+        
+        #heading>input{
+            margin: 0px auto;
+            font-size: 25px;
+            border: none;
+            font-weight: bold;
+            background: transparent;
+            color: var(--white);
+        }
+        #heading>input:hover{
+            border: 1px solid black;
+        }
+        #video_section{
+            width: 80%;
+            height:80% ;
+            margin: 10px auto;
+            /* border: 1px solid black; */
+        }
+        #video_section>div{
+            width: 100%;
+        }
+        iframe{
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        #video_caption>p{
+            margin: 10px 140px;
+            color: var(--white);
+        }
+        /* increase and decrease button  */
+        #inc,#dec:hover{
+            cursor: pointer;
+        }
+        
+        /* modal style  */
+        /* The Modal (background) */
+        .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        /*padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        }
+
+        /* Modal Content */
+        .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 5px;
+        border: 1px solid #888;
+        width: 98%;
+        height: 98%;
+        background: url("https://t4.ftcdn.net/jpg/03/45/16/85/360_F_345168514_PI49D3RASetPGhbzqwLXaDDoz5avjNZy.jpg"); 
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover; 
+        overflow: hidden;
+    }
+
+        /* The Close Button */
+        .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        }
+        /* Add Animation */
+        @keyframes animatetop {
+        from {top: -300px; opacity: 0}
+        to {top: 0; opacity: 1}
+        }
+
+        /* modal box presentation  */
+        #presentation{
+            height: 80%;
+            height: 80%;
+            color: #fefefe;        
+        }
+        /* add image  */
+        #image{
+            display: flex;
+            border: 1px solid black;
+            padding:1px 5px;
+            background-color: rgb(241, 240, 240);
+        }
+        #image:hover{
+            cursor: pointer;
+            background-color: rgb(227, 224, 224);
+        }
+        #img{
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <!-- <h3> -->
+                <input type="text" id="quiz_name" value="Presentation">
+            <!-- </h3> -->
+            <p>Created by Presentor</p>
+        </div>
+        <div>
+            <button>
+                <span class="material-symbols-outlined">share</span>
+                <h3>Share</h3>
+            <button id="myBtn">
+                <span class="material-symbols-outlined">play_arrow</span>
+                <h3>Present</h3>
+            </button>
+            <select name="" id="">
+                <option value=""></option>
+                <option value="">Open mentimote</option>
+                <option value="">Preview Presentation</option>
+            </select>
+        </div>
+    </div>
+    <div id="navbar-2">
+        <div id="navbar-2-left">
+            <button id="new_slide">
+                <span class="material-symbols-outlined">add</span>
+                <h3>New Slide</h3>
+            </button>
+            <button id="go_back">
+                <span class="material-symbols-outlined">file_upload</span>
+                <h3>Import</h3>
+            </button>
+        </div>
+        <div id="navbar-2-right">
+            <div>
+                <span>
+                    <img src="https://img.icons8.com/external-others-zufarizal-robiyanto/128/external-bulb-mutuline-e-learning-others-zufarizal-robiyanto.png" width="20px" height="20px">
+                </span>
+                <h3>Examples</h3>
+            </div>
+            <div>
+                <span>
+                    <img src="https://img.icons8.com/external-kiranshastry-lineal-kiranshastry/128/external-drop-medical-kiranshastry-lineal-kiranshastry.png" width="15px" height="15px">
+                </span>
+                <h3>Themes</h3>
+            </div>
+            <div id="settings">
+                <span class="material-symbols-outlined">settings</span>
+                <h3>Settings</h3>
+
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <div id="slide_page">
+            <!-- single div template page  -->
+            <!-- <div>
+                <div class="no">
+                    <span>
+                        1
+                    </span>
+                    <span>
+                        <img src="https://www.iconsdb.com/icons/download/blue/play-24.png"/>
+                    </span>
+                </div>
+                <div class="page">
+
+                </div>
+            </div> -->
+            <!-- ************** -->
+        </div>
+        <div id="main_slide">
+            <div>
+                <div id="heading"></div>
+                <div id="video_section"></div>
+                <div id="video_caption"></div>
+                <!-- test  -->
+                <!-- <h1 id="heading">This is a heading</h1>
+                <div id="video_section">
+                    <iframe class="video" src=""></iframe>
+                </div> -->
+                <!-- -------->
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <img src="https://t4.ftcdn.net/jpg/03/45/16/85/360_F_345168514_PI49D3RASetPGhbzqwLXaDDoz5avjNZy.jpg" alt="" width="100%" height="100%">
+                    </div>
+                    <p>The slide image appears in your audience's devices</p>
+                </div>                
+                <div>
+                    <h1>T</h1>
+                    <span id="dec" class="material-symbols-outlined">remove</span>
+                    <!-- <img id="dec" src="https://www.iconsdb.com/icons/download/color/8C8C8C/minus-16.png" width="12px" height="5px"> -->
+                    <span id="inc" class="material-symbols-outlined">add</span>
+                    <!-- <img id="inc" src="https://www.iconsdb.com/icons/download/black/plus-2-16.png" width="12px" height="13px" > -->
+                </div>
+            </div>
+        </div>
+
+
+         <!-- =================================  -->
+        <!-- this is done by Ketan(fw18_0991) === it Style Type part -->
+        <div id="styleType">
+            <div id="head">
+                <h3 id="style_Heading">Style Type</h3>
+                
+                <div class="dropdown">
+                    <button id="dropdown_btn" onclick="myFunction()" class="dropbtn"> Categories >> </button>                
+                    <div id="myDropdown" class="dropdown-content">
+                        
+                        <h3>Popular Question Type</h3>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">forum</span>
+                            <i>Q&A</i>
+                            <span class="material-count">13</span>
+                        </div>
+                                
+                        <h3>Quiz Competition</h3>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">playlist_add_check</span>
+                            <i>Select Answer</i>
+                        </div>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">edit_note</span>
+                            <i>Type Answer</i>
+                        </div>
+            
+                        <h3>Content slides</h3>
+                        <div class="dis_flex" id="add_heading">
+                            <span class="material-symbols-outlined">feed</span>
+                            <i>Heading</i>
+                        </div>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">segment</span>
+                            <i>Paragraph</i>
+                        </div>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">image</span>
+                            <i>Image</i>
+                        </div>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">play_circle</span>
+                            <i>Video</i>
+                        </div>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">format_quote</span>
+                            <i>Quote</i>
+                        </div>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">123</span>
+                            <i>Number</i>
+                        </div>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">qr_code_2</span>
+                            <i>Instructions</i>
+                        </div>
+            
+                        <h3>Advanced Questions</h3>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">drag_handle</span>
+                            <i>100 points</i>
+                        </div>
+                        <div class="dis_flex">
+                            <span class="material-symbols-outlined">grid_view</span>
+                            <i>2x2 grid</i>
+                        </div>
+                      
+                    </div>
+                  </div>
+                </div>
+    
+                <div id="div2">
+                    <div id="sub-head">
+                        <h4 id="content" class="tablink" onclick="changeData('content_type', this, 'green', 'white')">Content</h4>
+                        <h4 id="customize" class="tablink" onclick="changeData('customize_type', this, 'green','white')">Customize</h4>
+                    </div>
+    
+                   <!-- here is the content part -->
+                    <div id="content_type" class="tabcontent">
+                            <a href="#">Add meta description</a>
+    
+                            <div id="video_div">
+                                <h3>Video caption</h3>
+                                <input type="text" id="video_input">
+                            </div>
+    
+                            <div id="image_div" class="for_i">
+                                <h3>Image <i>?</i> </h3>
+                                <div id="image_box">
+                                    <div id="image"> 
+                                        <span id="img" class="material-symbols-outlined">photo_library</span>
+                                        Add Picture
+                                    </div>
+                                    <button id="edit">Edit</button>
+                                    <button id="remove">Remove</button>
+                                </div>
+                            </div>
+    
+                            <div id="URL_div" class="for_i">
+                                <h3>URL <i>?</i> </h3>
+                                <div id="URL_box">
+                                    <input type="text" id="url_input" placeholder="https://youtube.com/xxxx">
+                                    <button id="add">Add</button>
+                                </div>
+                            </div>
+    
+                            <div id="reaction_div" class="for_i">
+                                    <h3>Reactions <i>?</i> </h3>
+                                <div id="reaction_flex">
+                                    <span class="material-symbols-outlined">favorite</span>
+                                    <span class="material-symbols-outlined">question_mark</span>
+                                    <span class="material-symbols-outlined">thumb_up</span>
+                                    <span class="material-symbols-outlined">thumb_down</span>
+                                </div>
+                            </div>
+                    </div>
+    
+                    <!-- here is the customize part -->
+                    <div id="customize_type" class="tabcontent">
+    
+                        <div id="slide_setting_div" class="for_i">
+                            <h3>Slide setting <i>?</i> </h3>
+                            <div id="slide_setting_box">
+                                <div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                    <i>Close voting</i>
+                                </div>
+                                 <div>
+                                      <label class="switch">
+                                        <input type="checkbox" checked>
+                                        <span class="slider round"></span>
+                                      </label>
+                                   <i>Hide instructions bar</i> <i>?</i>
+                                </div>
+                                <div>
+                                    <label class="switch">
+                                        <input type="checkbox">
+                                        <span class="slider round"></span>
+                                      </label>
+                                    <i>Hide results</i> <i id="show_results">Show results on all slides</i>
+                                </div>
+                               
+                            </div>
+                        </div>
+    
+                        <div id="layout_div">
+                            <h3>Layouts <button>BETA</button> </h3>
+                            <div id="layouts_beta">
+                                <span class="material-symbols-outlined">drag_handle</span>
+                                <span class="material-symbols-outlined">table_rows</span>
+                                <span class="material-symbols-outlined">view_module</span>
+                                <span class="material-symbols-outlined">view_list</span>
+                                <span class="material-symbols-outlined">horizontal_split</span>
+                                <span class="material-symbols-outlined">view_comfy</span>
+                                <span class="material-symbols-outlined">view_compact</span>
+                                <span class="material-symbols-outlined">vertical_split</span>
+                            </div>
+                        </div>
+    
+                        <div id="image_div" class="for_i">
+                            <h3>Image <i>?</i> </h3>
+                            <div id="image_box">
+                                <div id="image"> <img id="img" src="" alt="Add Picture"></div>
+                                <button id="edit">Edit</button>
+                                <button id="remove">Remove</button>
+                            </div>
+                        </div>
+    
+                      
+    
+                        <div id="advanced_div" >
+                           
+                                <div id="advanced_div1">
+                                    <h3>Advanced layouts</h3> <button>BETA</button> <h3 id="expand1">Expand</h3>
+                                </div>
+                                <div id="advanced_div2">
+                                    <h3>Advanced colors</h3> ✡️ <button>BETA</button> <h3 id="expand2">Expand</h3>
+                                </div>
+    
+                        </div>
+                </div>
+    
+            </div> 
+            
+        </div>
+      <!-- here is the end of style type -->
+        <!-- =================================  -->
+        <!-- modal  -->
+        </div>
+        <!-- <h3>Modal Example</h3> -->
+
+        <!-- Trigger/Open The Modal -->
+        <!-- <button id="myBtn">Open Modal</button> -->
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="presentation"></div>
+            <!-- <p>Some text in the Modal..</p> -->
+        </div>
+
+        </div>
+    <!-- ----------->
+</body>
+</html>
+<script>
+    let headingVideo = JSON.parse(localStorage.getItem("heading"));
+
+    if(headingVideo===null){
+        localStorage.setItem("heading",JSON.stringify("Heading"));
+        headingVideo = "Heading";
+    }
+
+    document.getElementById("new_slide").addEventListener("click",() => {
+        add_slide();
+    })
+
+    window.addEventListener("load", ()=>{
+        display_slidepage(page);
+        let mainSlide = document.querySelector("#main_slide>div:first-child");
+        mainSlide.style.backgroundImage='url("https://t4.ftcdn.net/jpg/03/45/16/85/360_F_345168514_PI49D3RASetPGhbzqwLXaDDoz5avjNZy.jpg")';
+        mainSlide.style.backgroundRepeat = "no-repeat";
+        mainSlide.style.backgroundSize = "cover";
+        mainSlide.style.overflow = "hidden";
+        mainSlide.style.backgroundPosition = "center";
+    })
+
+    let page=[1];
+    if(page.length==1){
+        count=1;
+    }
+
+    let add_slide = () => {
+        count++;
+        page.push(count);
+        display_slidepage(page);
+    }
+
+    let display_slidepage = (pagesArr) => {
+        let slide_page_container = document.getElementById("slide_page");
+
+        slide_page_container.innerHTML = null;
+
+        pagesArr.forEach((p) => {
+
+            let newSlide = document.createElement("div");
+            newSlide.innerHTML=`
+                <div class="no">
+                    <span>
+                        ${p}
+                    </span>
+                    <span>
+                        <img src="https://www.iconsdb.com/icons/download/blue/play-24.png"/>
+                    </span>
+                </div>
+                <div class="page">
+                    <img src="https://t4.ftcdn.net/jpg/03/45/16/85/360_F_345168514_PI49D3RASetPGhbzqwLXaDDoz5avjNZy.jpg"/>
+                </div>
+            `;
+            newSlide.addEventListener("click", ()=>{
+                alert(p);
+            })
+            slide_page_container.append(newSlide);
+        })
+    }
+
+// append video to main slide  
+document.getElementById("add").addEventListener("click", ()=>{
+    // https://youtu.be/drTKSu5DEh4
+    let mainSlide = document.querySelector("#main_slide>div");
+
+    let input_url = document.getElementById("url_input").value.split("/");
+    let video_id = input_url[input_url.length-1];
+
+    let video_url = `https://www.youtube.com/embed/${video_id}`;
+    
+    let video_div = document.getElementById("video_section");
+    video_div.innerHTML = `<iframe class="video" src="${video_url}" allowfullscreen></iframe>`;
+    
+    // add to ls 
+
+    localStorage.setItem("video",JSON.stringify(video_url));    
+})
+
+// <h1 id="heading">This is a heading</h1>
+//                 <div id="video_section">
+//                     <iframe class="video" src=""></iframe>
+//                 </div>
+
+// append heading to main slide 
+document.getElementById("add_heading").addEventListener("click",()=>{
+    // let mainSlide = document.querySelector("#main_slide>div");
+    let heading = document.getElementById("heading");
+    heading.innerHTML = `<input type='text' value="${headingVideo}" id="vid_head"/>`;
+    addHead();
+})
+
+// add heading to ls upon changing 
+// if(isHeading==true){
+    let addHead = () => {
+        document.getElementById("vid_head").addEventListener("input", () => {
+        let val = document.getElementById("vid_head").value;
+        localStorage.setItem("heading",JSON.stringify(val));
+        })
+    };
+// }
+
+
+// add caption to video
+document.getElementById("video_input").addEventListener("input",(e) => {
+    let video_caption = document.getElementById("video_caption");
+    let val = document.getElementById("video_input").value;
+    
+    video_caption.innerHTML=null;
+    video_caption.innerHTML = `<p>${val}</p>`;
+    console.log(val);
+
+    // add caption to ls 
+    localStorage.setItem("caption",JSON.stringify(val));
+
+})
+
+let font = 25;
+// increase heading font 
+document.getElementById("inc").addEventListener("click", ()=> {
+    let heading = document.querySelector("#heading>input");
+    font++;
+    heading.style.fontSize = `${font}px`;
+})
+document.getElementById("dec").addEventListener("click", ()=> {
+    let heading = document.querySelector("#heading>input");
+    font--;
+    heading.style.fontSize = `${font}px`;
+})
+
+document.getElementById("go_back").addEventListener("click", () => {
+    window.location.href="template_folder.html";
+})
+
+</script>
+<script src="./scripts/styleType.js"></script>
+<script>
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+let add_content= () => {
+    let content = document.querySelector("#presentation");
+    let heading = JSON.parse(localStorage.getItem("heading"));
+    let videoSrc = JSON.parse(localStorage.getItem("video"));
+    let videoCaption = JSON.parse(localStorage.getItem("caption"));
+
+    content.innerHTML=`
+                <div id="heading">
+                    <h1>${heading}</h1>
+                </div>
+                <div id="video_section">
+                    <iframe class="video" src="${videoSrc}" allowfullscreen></iframe> 
+                </div>
+                <div id="video_caption">
+                    <p>${videoCaption}</p>    
+                </div>
+    `;
+}
+
+btn.onclick = function() {
+    add_content();
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
