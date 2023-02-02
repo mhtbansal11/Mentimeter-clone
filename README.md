@@ -25,8 +25,23 @@ We have cloned the Mentimeter website as project of our construct week at** Masa
 <ul>
     <li>
      <div>
-         <h4>homepage</h4>
+         <h4>Homepage</h4>
          <img src="https://i.postimg.cc/zvtyL7zF/mentimeter-Img.png" alt="mentimeter homepage"/>
+     </div>
+    </li>
+    <li>
+     <div>
+         <h4>QNA Page</h4>
+         <img src="https://i.postimg.cc/PqDKrP1W/qna.png" alt="QNA"/>
+         <img src="https://i.postimg.cc/GpPY5Yk5/qna2.png" alt="QNA"/>
+         <img src="https://i.postimg.cc/ydV94djY/qna3.png" alt="QNA"/>
+         <img src="https://i.postimg.cc/8Pq6kw4Y/qna4.png" alt="QNA"/>
+     </div>
+    </li>
+    <li>
+     <div>
+         <h4>Pricing Page</h4>
+         <img src="https://i.postimg.cc/JzZBsJdz/pricing.png" alt="Pricing Page"/>
      </div>
     </li>
     <li>
@@ -53,7 +68,7 @@ Worked on template part with Ketan
 
 ### Mohit Bansal
 > Github: [mhtbansal11](https://github.com/mhtbansal11)
-Worked on navbar, homepage
+Worked on navbar, homepage, footer, QNA page
 
 ### Rohit Prajapat
 > Github: [Rohit20033](https://github.com/Rohit20033)
